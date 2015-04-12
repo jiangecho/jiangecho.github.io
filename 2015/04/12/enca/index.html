@@ -3,20 +3,32 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | Jianechos blog</title>
+  <title>enca | Jianechos blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in trobuleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="安装
+查看当前文件编码enca -L zh_CN ip.txt     Simplified Chinese National Standard; GB2312     Surrounded by/intermixed with non-text data  　　
+转换命令格式如下  　　$enca -L 当前语言 -x 目标编码 文件名
+
+
+例如要把当前目录下的所有文件都转成utf-8  　　e">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://jiangecho.com/2015/04/12/hello-world/index.html">
+<meta property="og:title" content="enca">
+<meta property="og:url" content="http://jiangecho.com/2015/04/12/enca/index.html">
 <meta property="og:site_name" content="Jianechos blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in trobuleshooting or you can ask me on GitHub.
-Quick">
+<meta property="og:description" content="安装
+查看当前文件编码enca -L zh_CN ip.txt     Simplified Chinese National Standard; GB2312     Surrounded by/intermixed with non-text data  　　
+转换命令格式如下  　　$enca -L 当前语言 -x 目标编码 文件名
+
+
+例如要把当前目录下的所有文件都转成utf-8  　　e">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in trobuleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="enca">
+<meta name="twitter:description" content="安装
+查看当前文件编码enca -L zh_CN ip.txt     Simplified Chinese National Standard; GB2312     Surrounded by/intermixed with non-text data  　　
+转换命令格式如下  　　$enca -L 当前语言 -x 目标编码 文件名
+
+
+例如要把当前目录下的所有文件都转成utf-8  　　e">
   
     <link rel="alternative" href="/atom.xml" title="Jianechos blog" type="application/atom+xml">
   
@@ -66,10 +78,10 @@ Quick">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-enca" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/04/12/hello-world/" class="article-date">
-  <time datetime="2015-04-12T11:53:02.000Z" itemprop="datePublished">4月 12 2015</time>
+    <a href="/2015/04/12/enca/" class="article-date">
+  <time datetime="2015-04-12T12:03:35.000Z" itemprop="datePublished">4月 12 2015</time>
 </a>
     
   </div>
@@ -80,7 +92,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      enca
     </h1>
   
 
@@ -88,20 +100,18 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <ol>
+<li>安装</li>
+<li>查看当前文件编码<br><code>enca -L zh_CN ip.txt</code>     Simplified Chinese National Standard; GB2312     Surrounded by/intermixed with non-text data  　　</li>
+<li>转换命令格式如下  　　<br><code>$enca -L 当前语言 -x 目标编码 文件名</code></li>
+</ol>
+<hr>
+<p>例如要把当前目录下的所有文件都转成utf-8  　　<br><code>enca -L zh_CN -x utf-8 *</code><br>检查文件的编码<br><code>enca -L zh_CN file</code><br>将文件编码转换为”UTF-8”编码<br><code>enca -L zh_CN -x UTF-8 file</code><br>如果不想覆盖原文件可以这样<br><code>enca -L zh_CN -x UTF-8 &lt; file1 &gt; file2</code></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jiangecho.com/2015/04/12/hello-world/" data-id="ci8eeok6i00030c090ety70a9" class="article-share-link">Share</a>
+      <a data-url="http://jiangecho.com/2015/04/12/enca/" data-id="ci8eeok6k00040c09yiyp8yb9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -110,19 +120,10 @@ Quick">
     
 <nav id="article-nav">
   
-    <a href="/2015/04/12/enca/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          enca
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/04/12/test/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/04/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">test</div>
+      <div class="article-nav-title">Hello World</div>
     </a>
   
 </nav>

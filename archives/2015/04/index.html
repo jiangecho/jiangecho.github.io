@@ -65,6 +65,49 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-enca" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/04/12/enca/" class="article-date">
+  <time datetime="2015-04-12T12:03:35.000Z" itemprop="datePublished">4月 12 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/12/enca/">enca</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>安装</li>
+<li>查看当前文件编码<br><code>enca -L zh_CN ip.txt</code>     Simplified Chinese National Standard; GB2312     Surrounded by/intermixed with non-text data  　　</li>
+<li>转换命令格式如下  　　<br><code>$enca -L 当前语言 -x 目标编码 文件名</code></li>
+</ol>
+<hr>
+<p>例如要把当前目录下的所有文件都转成utf-8  　　<br><code>enca -L zh_CN -x utf-8 *</code><br>检查文件的编码<br><code>enca -L zh_CN file</code><br>将文件编码转换为”UTF-8”编码<br><code>enca -L zh_CN -x UTF-8 file</code><br>如果不想覆盖原文件可以这样<br><code>enca -L zh_CN -x UTF-8 &lt; file1 &gt; file2</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jiangecho.com/2015/04/12/enca/" data-id="ci8eeok6k00040c09yiyp8yb9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/04/12/hello-world/" class="article-date">
@@ -100,7 +143,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jiangecho.com/2015/04/12/hello-world/" data-id="ci8ee7vu00003qb091bye6f28" class="article-share-link">Share</a>
+      <a data-url="http://jiangecho.com/2015/04/12/hello-world/" data-id="ci8eeok6i00030c090ety70a9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -137,7 +180,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jiangecho.com/2015/04/12/test/" data-id="ci8ee7vt00000qb09rqhgb3il" class="article-share-link">Share</a>
+      <a data-url="http://jiangecho.com/2015/04/12/test/" data-id="ci8eeok6000000c09ylcx0o5z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -162,7 +205,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -172,6 +215,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/04/12/enca/">enca</a>
+          </li>
         
           <li>
             <a href="/2015/04/12/hello-world/">Hello World</a>
@@ -187,10 +234,6 @@
         
           <li>
             <a href="/2015/01/06/note_of_OReilly.Java.in.a.Nutshell.6th.Edition/">Note of OReilly Java in a Nutshell 6th Edition</a>
-          </li>
-        
-          <li>
-            <a href="/2015/01/06/ThreadLocal/">ThreadLocal</a>
           </li>
         
       </ul>
