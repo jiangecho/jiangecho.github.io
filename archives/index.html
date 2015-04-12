@@ -65,6 +65,51 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/04/12/hello-world/" class="article-date">
+  <time datetime="2015-04-12T11:53:02.000Z" itemprop="datePublished">4月 12 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/12/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jiangecho.com/2015/04/12/hello-world/" data-id="ci8ee7vu00003qb091bye6f28" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/04/12/test/" class="article-date">
@@ -92,7 +137,216 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jiangecho.com/2015/04/12/test/" data-id="ci8edus69000hzh09eqevczfq" class="article-share-link">Share</a>
+      <a data-url="http://jiangecho.com/2015/04/12/test/" data-id="ci8ee7vt00000qb09rqhgb3il" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Java_thread" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/07/Java_thread/" class="article-date">
+  <time datetime="2015-01-07T15:01:42.000Z" itemprop="datePublished">1月 7 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/07/Java_thread/">Java Thread</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Java_Thread">Java Thread</h2><h3 id="Synchronization">Synchronization</h3><p>The most basic of these methods is <em>synchronization</em>, which is implemented using <strong>monitors</strong>. Each object in Java is associated with a monitor, which a thread can <em>lock</em> or <em>unlock</em>. Only one thread at a time may hold a lock on a monitor. Any other threads attempting to lock that monitor are blocked until they can obtain a lock on that monitor. A thread <code>t</code> may lock a particular monitor multiple times; each unlock reverses the effect of one lock operation.</p>
+<p>The <code>synchronized</code> statement computes a reference to an object; it then attempts to perform a lock action on that object’s monitor and does not proceed further until the lock action has successfully completed. After the lock action has been performed, the body of the <code>synchronized</code> statement is executed. If execution of the body is ever completed, either normally or abruptly, an unlock action is automatically performed on that same monitor.</p>
+<p>A <code>synchronized</code> method automatically performs a lock action when it is invoked:</p>
+<ol>
+<li>If the method is an instance method, it locks the monitor associated with the <strong>instance</strong> for which it was invoked (that is, the object that will be known as <code>this</code> during execution of the body of the method). </li>
+<li>If the method is static, it locks the monitor associated with the <strong>Class object</strong> that represents the class in which the method is<br>defined. </li>
+</ol>
+<h3 id="Wait_Sets_and_Notification">Wait Sets and Notification</h3><p>Every object, in addition to having an associated monitor, has an associated <em>wait set</em>. A wait set is a set of threads.</p>
+<p>When an object is first created, its wait set is empty. Elementary actions that add threads to and remove threads from wait sets are atomic. Wait sets are manipulated solely through the methods <code>Object.wait</code>, <code>Object.notify</code>, and <code>Object.notifyAll</code>.</p>
+<p>Wait set manipulations can also be affected by the interruption status of a thread, and by the Thread class’s methods dealing with interruption. Additionally, the <code>Thread</code> class’s methods for sleeping and joining other threads have properties derived from those of wait and notification actions.</p>
+<p><strong>����<code>wait()</code>֮�󣬻��ͷ�lock����resume��ʱ�򣬻��ٴ�ȥlock</strong></p>
+<h3 id="ʾ��">ʾ��</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"start"</span>);</span><br><span class="line">        <span class="keyword">synchronized</span> (<span class="keyword">this</span>) &#123; <span class="comment">// wait/notify/notifyAll use the same</span></span><br><span class="line">                                <span class="comment">// synchronization resource</span></span><br><span class="line">								<span class="comment">// try to lock the monitor of this instance</span></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">            	System.out.println(<span class="string">"wait start"</span>);</span><br><span class="line">                <span class="keyword">this</span>.wait(); <span class="comment">// when this call is finished, will unlock the monitor</span></span><br><span class="line">                System.out.println(<span class="string">"wait end"</span>); <span class="comment">// when this thread is resumed, this </span></span><br><span class="line">												<span class="comment">// thread will try to lock the monitor of this instance</span></span><br><span class="line">												<span class="comment">// and then invoke any operations after `wait()`</span></span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace(); <span class="comment">// notify won't throw exception</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Thread thread = <span class="keyword">new</span> Main();</span><br><span class="line">        thread.start();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            sleep(<span class="number">2000</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">synchronized</span> (thread) &#123;</span><br><span class="line">            System.out.println(<span class="string">"Wait() will release the lock!"</span>);</span><br><span class="line">            thread.notify();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The out put is:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">start</span><br><span class="line">wait start</span><br><span class="line"><span class="title">Wait</span><span class="params">()</span> will release the lock!</span><br><span class="line">wait end</span></span><br></pre></td></tr></table></figure>
+<h3 id="�ο�">�ο�</h3><blockquote>
+<p>The Java Language Specification Java SE 7 Edition</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jiangecho.com/2015/01/07/Java_thread/" data-id="ci8ee7vu30005qb09ja9mxv74" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-note_of_OReilly.Java.in.a.Nutshell.6th.Edition" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/06/note_of_OReilly.Java.in.a.Nutshell.6th.Edition/" class="article-date">
+  <time datetime="2015-01-06T15:01:42.000Z" itemprop="datePublished">1月 6 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/06/note_of_OReilly.Java.in.a.Nutshell.6th.Edition/">Note of OReilly Java in a Nutshell 6th Edition</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Java_Syntax_from_the_Ground_Up">Java Syntax from the Ground Up</h1><h3 id="Labeled_statement">Labeled statement</h3><p>A labeled statement is simply a statement that has been given a name by prepending an identifier and a colon to it. Labels are used by the <strong>break</strong> and <strong>continue</strong> statements. For example:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rowLoop: <span class="keyword">for</span>(<span class="keyword">int</span> r = <span class="number">0</span>; r &lt; rows.length; r++) &#123;        <span class="comment">// Labeled loop</span></span><br><span class="line">   colLoop: <span class="keyword">for</span>(<span class="keyword">int</span> c = <span class="number">0</span>; c &lt; columns.length; c++) &#123;  <span class="comment">// Another one</span></span><br><span class="line">     <span class="keyword">break</span> rowLoop;                                    <span class="comment">// Use a label</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="The_try-with-resources_Statement">The try-with-resources Statement</h3><p>Java (since version 7) provides a very useful mechanism for automatically closing resources that require cleanup. This is known as try-with-resources, or <strong>TWR</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> (InputStream is = <span class="keyword">new</span> FileInputStream(<span class="string">"/Users/ben/details.txt"</span>)) &#123;</span><br><span class="line">  <span class="comment">// ... process the file and do not need to write catch and finally</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Checked_and_Unchecked_Exceptions">Checked and Unchecked Exceptions</h3><p><strong>Checked exceptions</strong> arise in specific, well-defined circumstances, and very often are conditions from which the application may <strong>be able to partially or fully recover</strong>.<br>Any exception object that is an <code>Error</code> is unchecked. There is also a subclass of <code>Exception</code> called <code>RuntimeException</code>��and any subclass of <code>RuntimeException</code> is also an unchecked exception. All other exceptions are checked exceptions.</p>
+<h3 id="Variable-Length_Argument_Lists">Variable-Length Argument Lists</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> first, <span class="keyword">int</span>... rest<span class="comment">/*can only be the last parameter*/</span>)</span> </span>&#123;</span><br><span class="line">    <span class="comment">/* body omitted for now */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">max(<span class="number">1</span>);</span><br><span class="line">max(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line">max(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>yeah, this method is the same as:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> first, <span class="keyword">int</span>[] rest)</span> </span>&#123;</span><br><span class="line">    <span class="comment">/* body omitted for now */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">max(<span class="number">1</span>, <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;);</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<h3 id="Lambda_Expressions">Lambda Expressions</h3><p>A <strong>lambda expression</strong> is essentially a <em>function</em> that does not have a name, and can be treated as a value in the language.</p>
+<p>in Java, this means that a lambda is an <strong>anonymous method</strong> that is defined on some class (that is possibly unknown to the developer).</p>
+<p>The syntax for a lambda expression looks like this:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">( paramlist ) -&gt; &#123; statements &#125;</span><br></pre></td></tr></table></figure></p>
+<p>eg:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Runnable r = () -&gt; System.out.println(<span class="string">"Hello World"</span>);</span><br></pre></td></tr></table></figure></p>
+<p><strong>Attention:</strong></p>
+<p>When a lambda expression is used as a value it is automatically converted to a new object of the correct type for the variable that it is being placed into.</p>
+<h3 id="Initializer_blocks">Initializer blocks</h3><ul>
+<li>static initializer</li>
+<li>instance initializer</li>
+</ul>
+<h3 id="Interface">Interface</h3><p>An interface is intended to represent only an API��so it provides a description of a type, and the methods (and signatures) that classes that implement that API should provide.</p>
+<p>In general, a Java interface does not provide any implementation code for the methods that it describes. These methods are considered mandatory��any class that wishes to implement the interface must provide an implementation of these methods.</p>
+<p>However, an interface may wish to mark that some API methods are optional, and that implementing classes do not need to implement them if they choose not to.  This is done with the <code>default</code> keyword��and the interface must provide a default implementation of these optional methods, which will be used by any implementation that elects not to implement them.</p>
+<h3 id="Generics">Generics</h3><p>To indicate that a type is a container that holds instances of another reference type we enclose the payload type that the container holds within angle brackets:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;CenteredCircle&gt; shapes = <span class="keyword">new</span> ArrayList&lt;CenteredCircle&gt;();</span><br></pre></td></tr></table></figure></p>
+<p>Container types are usually called <code>generic types</code>��and they are declared like this:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Box</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">box</span><span class="params">(T t)</span></span>;</span><br><span class="line">  <span class="function">T <span class="title">unbox</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>This indicates that the <code>Box</code> interface is a general construct, which can hold any type of payload. It isn��t really a complete interface by itself��it��s more like a general description of a whole family of interfaces, one for each type that can be used in place of <code>T</code>.</p>
+<p>The syntax <t> has a special name��it��s called a <code>type parameter</code>, and another name for a generic type is a <code>parameterized type</code>. </t></p>
+<p>A parameterized type, such as <code>ArrayList&lt;T&gt;</code>, is not instantiable��we cannot create instances of them. This is because <code>&lt;T&gt;</code> is just a type parameter��merely a placeholder for a genuine type. It is only when we provide a concrete value for the type parameter, (e.g., <code>ArrayList&lt;String&gt;</code>), that the type becomes fully formed and we can create objects of that type.</p>
+<p>This poses a problem if the type that we want to work with is unknown at compile time. Fortunately, the Java type system is able to accommodate this concept. It does so by having an explicit concept of the unknown type��which is represented as <code>&lt;?&gt;</code>.</p>
+<p>This is the simplest example  of Java��s wildcard types.<br>We can write expressions that involve the unknown type:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;?&gt; mysteryList = unknownList();</span><br><span class="line">Object o = mysteryList.get(<span class="number">0</span>);</span><br></pre></td></tr></table></figure></p>
+<p>This is perfectly valid Java��<code>ArrayList&lt;?&gt;</code> is a complete type that a variable can have, unlike <code>ArrayList&lt;T&gt;</code>.</p>
+<h3 id="Enums_and_Annotations">Enums and Annotations</h3><h3 id="Singleton">Singleton</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> initialized = <span class="keyword">false</span>;</span><br><span class="line">    <span class="comment">// Constructor</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="keyword">super</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="comment">/* Do initialization */</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// This method should be the only way to get a reference </span></span><br><span class="line">    <span class="comment">// to the instance</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (initialized) <span class="keyword">return</span> instance;</span><br><span class="line">      instance.init();</span><br><span class="line">      initialized = <span class="keyword">true</span>;</span><br><span class="line">      <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jiangecho.com/2015/01/06/note_of_OReilly.Java.in.a.Nutshell.6th.Edition/" data-id="ci8ee7vtz0002qb096ra43xhw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ThreadLocal" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/06/ThreadLocal/" class="article-date">
+  <time datetime="2015-01-06T15:01:42.000Z" itemprop="datePublished">1月 6 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/06/ThreadLocal/">ThreadLocal</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="ThreadLocal">ThreadLocal</h2><h3 id="��ʲô��">��ʲô��</h3><p>���̵߳ľֲ�������ÿ���̶߳����Ի����Լ���һ�ݿ������޸ĵȲ��󣬲���Ӱ�������̵߳Ŀ�����</p>
+<h3 id="ʲôʱ���ã�">ʲôʱ���ã�</h3><ol>
+<li>ÿ���̶߳���Ҫһ�������Ļ�����</li>
+<li>ĳ�������Ĳ��������̰߳�ȫ�ģ���������ʹ���߳�ͬ�������ʡ�</li>
+</ol>
+<h3 id="��ô�ã�">��ô�ã�</h3><h4 id="ÿ���̶߳���Ҫһ�������Ļ���">ÿ���̶߳���Ҫһ�������Ļ���</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">StaticClass</span> </span>&#123;</span><br><span class="line">  <span class="keyword">static</span> <span class="keyword">private</span> ThreadLocal threadLocal = <span class="keyword">new</span> ThreadLocal&lt;User&gt;();</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">static</span> <span class="title">getThreadLocal</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> threadLocal;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">doGet(HttpServletRequest req, HttpServletResponse resp) &#123;</span><br><span class="line">  User user = getLoggedInUser(req);</span><br><span class="line">  StaticClass.getThreadLocal().set(user)</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    doSomething()</span><br><span class="line">    doSomethingElse()</span><br><span class="line">    renderResponse(resp)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">finally</span> &#123;</span><br><span class="line">    StaticClass.getThreadLocal().remove()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Now any code that requires the user object at any time can get hold of it by extracting it from the thread local, without needing to resort to those pesky extra parameters:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User user = StaticClass.getThreadLocal().get()</span><br></pre></td></tr></table></figure></p>
+<p><strong>If we do not use <code>ThreadLocal</code>, we need to pass the context info through the parameters.</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">doGet(HttpServletRequest req, HttpServletResponse resp) &#123;</span><br><span class="line">  User user = getLoggedInUser(req);</span><br><span class="line">  doSomething(user) <span class="comment">// every method call into to pass in the context info</span></span><br><span class="line">  doSomethingElse(user)</span><br><span class="line">  renderResponse(resp,user)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="ĳ�������Ĳ��������̰߳�ȫ�ģ���������ʹ���߳�ͬ�������ʡ�">ĳ�������Ĳ��������̰߳�ȫ�ģ���������ʹ���߳�ͬ�������ʡ�</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Foo</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="comment">// SimpleDateFormat is not thread-safe, so give one to each thread</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> ThreadLocal&lt;SimpleDateFormat&gt; formatter = <span class="keyword">new</span> ThreadLocal&lt;SimpleDateFormat&gt;()&#123;</span><br><span class="line">        <span class="annotation">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">protected</span> SimpleDateFormat <span class="title">initialValue</span><span class="params">()</span></span><br><span class="line">        </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyyMMdd HHmm"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">formatIt</span><span class="params">(Date date)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> formatter.get().format(date);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Դ���ο�">Դ���ο�</h3><p><strong><code>ThreadLocal&lt;T&gt;</code> �ṩ��Ӧ����������<code>Thread</code>���е�<code>ThreadLocal.ThreadLocalMap</code>, ��map���и��̶߳�Ӧ���Ƿݿ���.</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadLocal</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">    <span class="javadoc">/**</span><br><span class="line">     * ThreadLocals rely on per-thread hash maps attached to each thread</span><br><span class="line">     * (Thread.threadLocals and inheritableThreadLocals).  The ThreadLocal</span><br><span class="line">     * objects act as keys, searched via threadLocalHashCode.  This is a</span><br><span class="line">     * custom hash code (useful only within ThreadLocalMaps) that eliminates</span><br><span class="line">     * collisions in the common case where consecutively constructed</span><br><span class="line">     * ThreadLocals are used by the same threads, while remaining well-behaved</span><br><span class="line">     * in less common cases.</span><br><span class="line">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> threadLocalHashCode = nextHashCode();</span><br><span class="line"></span><br><span class="line">    <span class="javadoc">/**</span><br><span class="line">     * The next hash code to be given out. Accessed only by like-named method.</span><br><span class="line">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> nextHashCode = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="javadoc">/**</span><br><span class="line">     * The difference between successively generated hash codes - turns</span><br><span class="line">     * implicit sequential thread-local IDs into near-optimally spread</span><br><span class="line">     * multiplicative hash values for power-of-two-sized tables.</span><br><span class="line">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> HASH_INCREMENT = <span class="number">0x61c88647</span>;</span><br><span class="line"></span><br><span class="line">    <span class="javadoc">/**</span><br><span class="line">     * Compute the next hash code. The static synchronization used here</span><br><span class="line">     * should not be a performance bottleneck. When ThreadLocals are</span><br><span class="line">     * generated in different threads at a fast enough rate to regularly</span><br><span class="line">     * contend on this lock, memory contention is by far a more serious</span><br><span class="line">     * problem than lock contention.</span><br><span class="line">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> <span class="keyword">int</span> <span class="title">nextHashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> h = nextHashCode;</span><br><span class="line">        nextHashCode = h + HASH_INCREMENT;</span><br><span class="line">        <span class="keyword">return</span> h;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="javadoc">/**</span><br><span class="line">     * Creates a thread local variable.</span><br><span class="line">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ThreadLocal</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="javadoc">/**</span><br><span class="line">     * Returns the value in the current thread's copy of this thread-local</span><br><span class="line">     * variable.  Creates and initializes the copy if this is the first time</span><br><span class="line">     * the thread has called this method.</span><br><span class="line">     *</span><br><span class="line">     *<span class="javadoctag"> @return</span> the current thread's value of this thread-local</span><br><span class="line">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">get</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Thread t = Thread.currentThread();</span><br><span class="line">        ThreadLocalMap map = getMap(t);</span><br><span class="line">        <span class="keyword">if</span> (map != <span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">return</span> (T)map.get(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Maps are constructed lazily.  if the map for this thread</span></span><br><span class="line">        <span class="comment">// doesn't exist, create it, with this ThreadLocal and its</span></span><br><span class="line">        <span class="comment">// initial value as its only entry.</span></span><br><span class="line">        T value = initialValue();</span><br><span class="line">        createMap(t, value);</span><br><span class="line">        <span class="keyword">return</span> value;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="javadoc">/**</span><br><span class="line">     * Sets the current thread's copy of this thread-local variable</span><br><span class="line">     * to the specified value.  Many applications will have no need for</span><br><span class="line">     * this functionality, relying solely on the &#123;@link #initialValue&#125;</span><br><span class="line">     * method to set the values of thread-locals.</span><br><span class="line">     *</span><br><span class="line">     *<span class="javadoctag"> @param</span> value the value to be stored in the current threads' copy of</span><br><span class="line">     *        this thread-local.</span><br><span class="line">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">set</span><span class="params">(T value)</span> </span>&#123;</span><br><span class="line">        Thread t = Thread.currentThread();</span><br><span class="line">        ThreadLocalMap map = getMap(t);</span><br><span class="line">        <span class="keyword">if</span> (map != <span class="keyword">null</span>)</span><br><span class="line">            map.set(<span class="keyword">this</span>, value); <span class="comment">// Thread ���е�Map�ᱣ��(ThreadLocal, T)</span></span><br><span class="line">        <span class="function"><span class="keyword">else</span></span><br><span class="line">            <span class="title">createMap</span><span class="params">(t, value)</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="javadoc">/**</span><br><span class="line">     * Get the map associated with a ThreadLocal. Overridden in</span><br><span class="line">     * InheritableThreadLocal.</span><br><span class="line">     *</span><br><span class="line">     *<span class="javadoctag"> @param</span>  t the current thread</span><br><span class="line">     *<span class="javadoctag"> @return</span> the map</span><br><span class="line">     */</span></span><br><span class="line">    <span class="function">ThreadLocalMap <span class="title">getMap</span><span class="params">(Thread t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> t.threadLocals;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="javadoc">/**</span><br><span class="line">     * Create the map associated with a ThreadLocal. Overridden in</span><br><span class="line">     * InheritableThreadLocal.</span><br><span class="line">     *</span><br><span class="line">     *<span class="javadoctag"> @param</span> t the current thread</span><br><span class="line">     *<span class="javadoctag"> @param</span> firstValue value for the initial entry of the map</span><br><span class="line">     *<span class="javadoctag"> @param</span> map the map to store.</span><br><span class="line">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">createMap</span><span class="params">(Thread t, T firstValue)</span> </span>&#123;</span><br><span class="line">        t.threadLocals = <span class="keyword">new</span> ThreadLocalMap(<span class="keyword">this</span>, firstValue);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .......</span><br><span class="line"></span><br><span class="line">    <span class="javadoc">/**</span><br><span class="line">     * ThreadLocalMap is a customized hash map suitable only for</span><br><span class="line">     * maintaining thread local values. No operations are exported</span><br><span class="line">     * outside of the ThreadLocal class. The class is package private to</span><br><span class="line">     * allow declaration of fields in class Thread.  To help deal with</span><br><span class="line">     * very large and long-lived usages, the hash table entries use</span><br><span class="line">     * WeakReferences for keys. However, since reference queues are not</span><br><span class="line">     * used, stale entries are guaranteed to be removed only when</span><br><span class="line">     * the table starts running out of space.</span><br><span class="line">     */</span></span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadLocalMap</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    ........</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><code>Thread</code>������<code>ThreadLocal.ThreadLocalMap</code></strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Thread</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">    ......</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* ThreadLocal values pertaining to this thread. This map is maintained</span><br><span class="line">     * by the ThreadLocal class. */</span></span><br><span class="line">    ThreadLocal.ThreadLocalMap threadLocals = <span class="keyword">null</span>;  </span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="ע��">ע��</h2><p><strong>����<code>ThreadLocal</code>�����˷��̰߳�ȫ�Ķ�������ô�ö�����Ȼ�Ƿ��̰߳�ȫ��</strong></p>
+<h2 id="����">����</h2><ol>
+<li><a href="http://stackoverflow.com/questions/817856/when-and-how-should-i-use-a-threadlocal-variable" target="_blank" rel="external">When and how should I use a ThreadLocal variable?</a></li>
+<li><a href="stackoverflow.com/questions/1490919/purpose-of-threadlocal">Purpose of ThreadLocal?</a></li>
+<li><a href="http://www.iteye.com/topic/103804" target="_blank" rel="external">��ȷ����ThreadLocal</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jiangecho.com/2015/01/06/ThreadLocal/" data-id="ci8ee7vu20004qb09sdj0z34b" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-test-post" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/12/24/test-post/" class="article-date">
+  <time datetime="2014-12-24T15:01:42.000Z" itemprop="datePublished">12月 24 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/12/24/test-post/">test post</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Hello_World">Hello World</h2><p>This is my first post. I will try my best to post as many posts as possible.<br>Just for testing.<br>Just for testing.</p>
+<h3 id="Test">Test</h3><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jiangecho.com/2014/12/24/test-post/" data-id="ci8ee7vtq0001qb090ij12ccm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -117,7 +371,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -129,7 +383,23 @@
       <ul>
         
           <li>
+            <a href="/2015/04/12/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
             <a href="/2015/04/12/test/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2015/01/07/Java_thread/">Java Thread</a>
+          </li>
+        
+          <li>
+            <a href="/2015/01/06/note_of_OReilly.Java.in.a.Nutshell.6th.Edition/">Note of OReilly Java in a Nutshell 6th Edition</a>
+          </li>
+        
+          <li>
+            <a href="/2015/01/06/ThreadLocal/">ThreadLocal</a>
           </li>
         
       </ul>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Note of OReilly Java in a Nutshell 6th Edition | Jianechos blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Java Syntax from the Ground UpLabeled statementA labeled statement is simply a statement that has been given a name by prepending an identifier and a colon to it. Labels are used by the break and cont">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Note of OReilly Java in a Nutshell 6th Edition">
+<meta property="og:url" content="http://jiangecho.com/2015/01/06/note_of_OReilly.Java.in.a.Nutshell.6th.Edition/index.html">
+<meta property="og:site_name" content="Jianechos blog">
+<meta property="og:description" content="Java Syntax from the Ground UpLabeled statementA labeled statement is simply a statement that has been given a name by prepending an identifier and a colon to it. Labels are used by the break and cont">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Note of OReilly Java in a Nutshell 6th Edition">
+<meta name="twitter:description" content="Java Syntax from the Ground UpLabeled statementA labeled statement is simply a statement that has been given a name by prepending an identifier and a colon to it. Labels are used by the break and cont">
+  
+    <link rel="alternative" href="/atom.xml" title="Jianechos blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Jianechos blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Hello World</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://jiangecho.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-note_of_OReilly.Java.in.a.Nutshell.6th.Edition" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/06/note_of_OReilly.Java.in.a.Nutshell.6th.Edition/" class="article-date">
+  <time datetime="2015-01-06T15:01:42.000Z" itemprop="datePublished">1月 6 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Note of OReilly Java in a Nutshell 6th Edition
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Java_Syntax_from_the_Ground_Up">Java Syntax from the Ground Up</h1><h3 id="Labeled_statement">Labeled statement</h3><p>A labeled statement is simply a statement that has been given a name by prepending an identifier and a colon to it. Labels are used by the <strong>break</strong> and <strong>continue</strong> statements. For example:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rowLoop: <span class="keyword">for</span>(<span class="keyword">int</span> r = <span class="number">0</span>; r &lt; rows.length; r++) &#123;        <span class="comment">// Labeled loop</span></span><br><span class="line">   colLoop: <span class="keyword">for</span>(<span class="keyword">int</span> c = <span class="number">0</span>; c &lt; columns.length; c++) &#123;  <span class="comment">// Another one</span></span><br><span class="line">     <span class="keyword">break</span> rowLoop;                                    <span class="comment">// Use a label</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="The_try-with-resources_Statement">The try-with-resources Statement</h3><p>Java (since version 7) provides a very useful mechanism for automatically closing resources that require cleanup. This is known as try-with-resources, or <strong>TWR</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> (InputStream is = <span class="keyword">new</span> FileInputStream(<span class="string">"/Users/ben/details.txt"</span>)) &#123;</span><br><span class="line">  <span class="comment">// ... process the file and do not need to write catch and finally</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Checked_and_Unchecked_Exceptions">Checked and Unchecked Exceptions</h3><p><strong>Checked exceptions</strong> arise in specific, well-defined circumstances, and very often are conditions from which the application may <strong>be able to partially or fully recover</strong>.<br>Any exception object that is an <code>Error</code> is unchecked. There is also a subclass of <code>Exception</code> called <code>RuntimeException</code>��and any subclass of <code>RuntimeException</code> is also an unchecked exception. All other exceptions are checked exceptions.</p>
+<h3 id="Variable-Length_Argument_Lists">Variable-Length Argument Lists</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> first, <span class="keyword">int</span>... rest<span class="comment">/*can only be the last parameter*/</span>)</span> </span>&#123;</span><br><span class="line">    <span class="comment">/* body omitted for now */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">max(<span class="number">1</span>);</span><br><span class="line">max(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line">max(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>yeah, this method is the same as:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> first, <span class="keyword">int</span>[] rest)</span> </span>&#123;</span><br><span class="line">    <span class="comment">/* body omitted for now */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">max(<span class="number">1</span>, <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;);</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<h3 id="Lambda_Expressions">Lambda Expressions</h3><p>A <strong>lambda expression</strong> is essentially a <em>function</em> that does not have a name, and can be treated as a value in the language.</p>
+<p>in Java, this means that a lambda is an <strong>anonymous method</strong> that is defined on some class (that is possibly unknown to the developer).</p>
+<p>The syntax for a lambda expression looks like this:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">( paramlist ) -&gt; &#123; statements &#125;</span><br></pre></td></tr></table></figure></p>
+<p>eg:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Runnable r = () -&gt; System.out.println(<span class="string">"Hello World"</span>);</span><br></pre></td></tr></table></figure></p>
+<p><strong>Attention:</strong></p>
+<p>When a lambda expression is used as a value it is automatically converted to a new object of the correct type for the variable that it is being placed into.</p>
+<h3 id="Initializer_blocks">Initializer blocks</h3><ul>
+<li>static initializer</li>
+<li>instance initializer</li>
+</ul>
+<h3 id="Interface">Interface</h3><p>An interface is intended to represent only an API��so it provides a description of a type, and the methods (and signatures) that classes that implement that API should provide.</p>
+<p>In general, a Java interface does not provide any implementation code for the methods that it describes. These methods are considered mandatory��any class that wishes to implement the interface must provide an implementation of these methods.</p>
+<p>However, an interface may wish to mark that some API methods are optional, and that implementing classes do not need to implement them if they choose not to.  This is done with the <code>default</code> keyword��and the interface must provide a default implementation of these optional methods, which will be used by any implementation that elects not to implement them.</p>
+<h3 id="Generics">Generics</h3><p>To indicate that a type is a container that holds instances of another reference type we enclose the payload type that the container holds within angle brackets:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;CenteredCircle&gt; shapes = <span class="keyword">new</span> ArrayList&lt;CenteredCircle&gt;();</span><br></pre></td></tr></table></figure></p>
+<p>Container types are usually called <code>generic types</code>��and they are declared like this:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Box</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">box</span><span class="params">(T t)</span></span>;</span><br><span class="line">  <span class="function">T <span class="title">unbox</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>This indicates that the <code>Box</code> interface is a general construct, which can hold any type of payload. It isn��t really a complete interface by itself��it��s more like a general description of a whole family of interfaces, one for each type that can be used in place of <code>T</code>.</p>
+<p>The syntax <t> has a special name��it��s called a <code>type parameter</code>, and another name for a generic type is a <code>parameterized type</code>. </t></p>
+<p>A parameterized type, such as <code>ArrayList&lt;T&gt;</code>, is not instantiable��we cannot create instances of them. This is because <code>&lt;T&gt;</code> is just a type parameter��merely a placeholder for a genuine type. It is only when we provide a concrete value for the type parameter, (e.g., <code>ArrayList&lt;String&gt;</code>), that the type becomes fully formed and we can create objects of that type.</p>
+<p>This poses a problem if the type that we want to work with is unknown at compile time. Fortunately, the Java type system is able to accommodate this concept. It does so by having an explicit concept of the unknown type��which is represented as <code>&lt;?&gt;</code>.</p>
+<p>This is the simplest example  of Java��s wildcard types.<br>We can write expressions that involve the unknown type:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;?&gt; mysteryList = unknownList();</span><br><span class="line">Object o = mysteryList.get(<span class="number">0</span>);</span><br></pre></td></tr></table></figure></p>
+<p>This is perfectly valid Java��<code>ArrayList&lt;?&gt;</code> is a complete type that a variable can have, unlike <code>ArrayList&lt;T&gt;</code>.</p>
+<h3 id="Enums_and_Annotations">Enums and Annotations</h3><h3 id="Singleton">Singleton</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> initialized = <span class="keyword">false</span>;</span><br><span class="line">    <span class="comment">// Constructor</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="keyword">super</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="comment">/* Do initialization */</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// This method should be the only way to get a reference </span></span><br><span class="line">    <span class="comment">// to the instance</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (initialized) <span class="keyword">return</span> instance;</span><br><span class="line">      instance.init();</span><br><span class="line">      initialized = <span class="keyword">true</span>;</span><br><span class="line">      <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jiangecho.com/2015/01/06/note_of_OReilly.Java.in.a.Nutshell.6th.Edition/" data-id="ci8ee7vtz0002qb096ra43xhw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/01/07/Java_thread/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Java Thread
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/01/06/ThreadLocal/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ThreadLocal</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/04/12/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2015/04/12/test/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2015/01/07/Java_thread/">Java Thread</a>
+          </li>
+        
+          <li>
+            <a href="/2015/01/06/note_of_OReilly.Java.in.a.Nutshell.6th.Edition/">Note of OReilly Java in a Nutshell 6th Edition</a>
+          </li>
+        
+          <li>
+            <a href="/2015/01/06/ThreadLocal/">ThreadLocal</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 jiangecho<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
