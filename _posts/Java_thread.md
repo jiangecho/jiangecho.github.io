@@ -25,9 +25,9 @@ When an object is first created, its wait set is empty. Elementary actions that 
 
 Wait set manipulations can also be affected by the interruption status of a thread, and by the Thread class's methods dealing with interruption. Additionally, the `Thread` class's methods for sleeping and joining other threads have properties derived from those of wait and notification actions.
 
-**µ÷ÓÃ`wait()`Ö®ºó£¬»áÊÍ·Ålock£¬µ±resumeµÄÊ±ºò£¬»áÔÙ´ÎÈ¥lock**
+**è°ƒç”¨`wait()`ä¹‹åŽï¼Œä¼šé‡Šæ”¾lockï¼Œå½“resumeçš„æ—¶å€™ï¼Œä¼šå†æ¬¡åŽ»lock**
 
-###Ê¾Àý
+###ç¤ºä¾‹
 
 ```java
 public class Main extends Thread {
@@ -73,6 +73,6 @@ Wait() will release the lock!
 wait end
 ```
 
-###²Î¿¼
+###å‚è€ƒ
 > The Java Language Specification Java SE 7 Edition
 

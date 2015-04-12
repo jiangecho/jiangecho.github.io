@@ -5,15 +5,15 @@ tags:
 
 ##ThreadLocal
 
-###ÊÇÊ²Ã´£¿
-ÊÇÏß³ÌµÄ¾Ö²¿±äÁ¿£¬Ã¿¸öÏß³Ì¶¼¿ÉÒÔ»ñµÃ×Ô¼ºµÄÒ»·İ¿½±´£¬ĞŞ¸ÄµÈ²Ù×÷£¬²»»áÓ°ÏìÆäËûÏß³ÌµÄ¿½±´¡£
+###æ˜¯ä»€ä¹ˆï¼Ÿ
+æ˜¯çº¿ç¨‹çš„å±€éƒ¨å˜é‡ï¼Œæ¯ä¸ªçº¿ç¨‹éƒ½å¯ä»¥è·å¾—è‡ªå·±çš„ä¸€ä»½æ‹·è´ï¼Œä¿®æ”¹ç­‰æ“ä½œï¼Œä¸ä¼šå½±å“å…¶ä»–çº¿ç¨‹çš„æ‹·è´ã€‚
 
-###Ê²Ã´Ê±ºòÓÃ£¿
-1. Ã¿¸öÏß³Ì¶¼ĞèÒªÒ»¸öÉÏÏÂÎÄ»·¾³¡£
-2. Ä³¸ö¶ÔÏóµÄ²Ù×÷²»ÊÇÏß³Ì°²È«µÄ£¬µ«Ïë±ÜÃâÊ¹ÓÃÏß³ÌÍ¬²½À´·ÃÎÊ¡£
+###ä»€ä¹ˆæ—¶å€™ç”¨ï¼Ÿ
+1. æ¯ä¸ªçº¿ç¨‹éƒ½éœ€è¦ä¸€ä¸ªä¸Šä¸‹æ–‡ç¯å¢ƒã€‚
+2. æŸä¸ªå¯¹è±¡çš„æ“ä½œä¸æ˜¯çº¿ç¨‹å®‰å…¨çš„ï¼Œä½†æƒ³é¿å…ä½¿ç”¨çº¿ç¨‹åŒæ­¥æ¥è®¿é—®ã€‚
 
-###ÔõÃ´ÓÃ£¿
-#### Ã¿¸öÏß³Ì¶¼ĞèÒªÒ»¸öÉÏÏÂÎÄ»·¾³
+###æ€ä¹ˆç”¨ï¼Ÿ
+#### æ¯ä¸ªçº¿ç¨‹éƒ½éœ€è¦ä¸€ä¸ªä¸Šä¸‹æ–‡ç¯å¢ƒ
 ```java
 class StaticClass {
   static private ThreadLocal threadLocal = new ThreadLocal<User>();
@@ -52,7 +52,7 @@ doGet(HttpServletRequest req, HttpServletResponse resp) {
 }
 ```
 
-#### Ä³¸ö¶ÔÏóµÄ²Ù×÷²»ÊÇÏß³Ì°²È«µÄ£¬µ«Ïë±ÜÃâÊ¹ÓÃÏß³ÌÍ¬²½À´·ÃÎÊ¡£
+#### æŸä¸ªå¯¹è±¡çš„æ“ä½œä¸æ˜¯çº¿ç¨‹å®‰å…¨çš„ï¼Œä½†æƒ³é¿å…ä½¿ç”¨çº¿ç¨‹åŒæ­¥æ¥è®¿é—®ã€‚
 ```java
 public class Foo
 {
@@ -72,9 +72,9 @@ public class Foo
 }
 ```
 
-###Ô´Âë²Î¿¼
+###æºç å‚è€ƒ
 
-**`ThreadLocal<T>` Ìá¹©ÏàÓ¦·½·¨À´²Ù×÷`Thread`³ÖÓĞµÄ`ThreadLocal.ThreadLocalMap`, ¸Ãmap´æÓĞ¸ÃÏß³Ì¶ÔÓ¦µÄÄÇ·İ¿½±´.**
+**`ThreadLocal<T>` æä¾›ç›¸åº”æ–¹æ³•æ¥æ“ä½œ`Thread`æŒæœ‰çš„`ThreadLocal.ThreadLocalMap`, è¯¥mapå­˜æœ‰è¯¥çº¿ç¨‹å¯¹åº”çš„é‚£ä»½æ‹·è´.**
 
 ```java
 public class ThreadLocal<T> {
@@ -154,7 +154,7 @@ public class ThreadLocal<T> {
         Thread t = Thread.currentThread();
         ThreadLocalMap map = getMap(t);
         if (map != null)
-            map.set(this, value); // Thread ³ÖÓĞµÄMap»á±£´æ(ThreadLocal, T)
+            map.set(this, value); // Thread æŒæœ‰çš„Mapä¼šä¿å­˜(ThreadLocal, T)
         else
             createMap(t, value);
     }
@@ -204,7 +204,7 @@ public class ThreadLocal<T> {
 
 ```
 
-**`Thread`Àà³ÖÓĞ`ThreadLocal.ThreadLocalMap`**
+**`Thread`ç±»æŒæœ‰`ThreadLocal.ThreadLocalMap`**
 ```java
 public class Thread implements Runnable {
     ......
@@ -215,11 +215,11 @@ public class Thread implements Runnable {
     ......
 }
 ```
-##×¢Òâ
+##æ³¨æ„
 
-**Èç¹û`ThreadLocal`ÒıÓÃÁË·ÇÏß³Ì°²È«µÄ¶ÔÏó£¬ÄÇÃ´¸Ã¶ÔÏóÒÀÈ»ÊÇ·ÇÏß³Ì°²È«µÄ**
+**å¦‚æœ`ThreadLocal`å¼•ç”¨äº†éçº¿ç¨‹å®‰å…¨çš„å¯¹è±¡ï¼Œé‚£ä¹ˆè¯¥å¯¹è±¡ä¾ç„¶æ˜¯éçº¿ç¨‹å®‰å…¨çš„**
 
-##ÒıÓÃ
+##å¼•ç”¨
 1. [When and how should I use a ThreadLocal variable?](http://stackoverflow.com/questions/817856/when-and-how-should-i-use-a-threadlocal-variable)
 2. [Purpose of ThreadLocal?](stackoverflow.com/questions/1490919/purpose-of-threadlocal)
-3. [ÕıÈ·Àí½âThreadLocal](http://www.iteye.com/topic/103804)
+3. [æ­£ç¡®ç†è§£ThreadLocal](http://www.iteye.com/topic/103804)
